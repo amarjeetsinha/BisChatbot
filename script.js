@@ -17,7 +17,9 @@ async function fetchData() {
     const loadingId = 'user-loading';
     displayLoading('chat-container', loadingId, 'user-message');
 
-    const response = await fetch('http://20.9.143.253:9000/bisleri/' + userInput);
+    const response = await fetch('http://20.9.143.253:9000/bisleri/' + userInput{
+    referrerPolicy: "unsafe_url" 
+});
 
     removeElement(loadingId);
 
