@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIS Bot</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="header">
+    <img src="logobg.jpg" alt="Chatbot Icon" id="botIcon">
+    
+  </div>
+  <div id="chat-container">
+    <!-- Chat messages will be displayed here -->
+  </div>
+  
+  <div class="satisfaction-container" id="satisfactionContainer" style="display: none;">
+    <div class="satisfaction-options">
+      Are you satisfied?
+      <button onclick="handleSatisfaction('Yes')">Yes</button>
+      <button onclick="handleSatisfaction('No')">No</button>
+    </div>
+    <span class="close-button" onclick="removeSatisfactionContainer()">✖</span>
+  </div>
+  
+  <div class="chat-card user-message right-align-user centerAlignText" id="userCard">
+    <input type="text" id="userInput" placeholder="Type your message..." onfocus="removeSatisfactionContainer()">
+    <button id="sendButton" onclick="sendMessage()"><img class="sendIco" src="send.png"></button>
+  </div>
+  
+</body>
+</html>
